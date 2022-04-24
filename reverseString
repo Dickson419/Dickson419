@@ -1,0 +1,29 @@
+package projectOne;
+//take the characters from a string and reverse them
+
+public class ReverseString {
+    public static void main(String[] args){
+        String r = reverse("dog"); //reverse method is called below and that code is run...
+        System.out.println(r);
+    }
+
+    //create method to reverse letters
+    public static String reverse(String s){
+        //need a way to store each character and then reorder them in a new string
+        char [] letters = new char [s.length()]; //create an array and declare length i.e the length of the word
+
+        int letterIndex = 0;
+
+        //iterate from the length(end) of the string down to the start of the string
+        for(int i = s.length() - 1; i >= 0; i--){ //negative indexing. First character is the last at position -1
+            letters[letterIndex] = s.charAt(i); //add the character to the letters array
+            letterIndex++; //increment the letter index i.e add the next character into the next index in the array
+        }
+        String reverse = "";
+        for(int i = 0; i < s.length(); i++){
+            reverse = reverse + letters[i];
+        }
+
+        return reverse; //return the result to the main method
+    }
+}

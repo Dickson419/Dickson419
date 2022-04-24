@@ -1,0 +1,47 @@
+package projectOne;
+//make a method that will find all prime numbers between a start and end range
+//return and ArrayList of all primes in that range
+//multiples are itself and one i.e 5 has itself and one
+import java.util.ArrayList;
+
+public class primeNumbers {
+
+    public static void main(String[] args){
+        System.out.println(findPrimes(1, 100));
+
+    }
+
+    //create a method and add the start and end arguments(range to find primes). Declare type in < >
+    public static ArrayList<Integer> findPrimes(int start, int end) {
+        //make an array list called primes and declared as an integer
+        ArrayList<Integer> primes = new ArrayList<Integer>();
+
+        //int n = 20; USED FOR TESTING
+        for(int n = start; n < end; n++){
+            boolean prime = true;
+            int i = 2;
+
+            while(i <= n/2)
+            {
+                //System.out.println("Checking if " + i + " is a multiple");
+                if(n % i == 0)
+                {
+                    //System.out.println("Yes! We have found a multiple: " + i);
+                    prime = false;
+                    break;
+                }
+
+                i++;
+            }
+        if(prime){
+            primes.add(n);
+        }
+        }
+
+
+        //System.out.println(prime); TESTING
+
+        return primes;
+
+    }
+}

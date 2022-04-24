@@ -1,0 +1,19 @@
+package projectOne;
+//take two numbers from the user
+//add them together
+//return the result!
+
+import java.util.Scanner;
+
+public class addTwoNumbersFromUser {
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in); //expect input from the console
+        System.out.println("Enter a number: ");
+        int a = scan.nextInt();
+        System.out.println("Enter a second number: ");
+        int b = scan.nextInt();
+        System.out.println(a+b);
+
+
+    }
+}

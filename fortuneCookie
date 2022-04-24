@@ -1,0 +1,22 @@
+package projectOne;
+//end result = a random fortune comes up
+//need all the fortunes
+//need a way to get the fortunes at random
+
+import java.util.Collections;
+import java.util.Random;
+
+public class fortuneCookie {
+    public static void main(String[] args){
+        String[] fortunes = {"Happy", "Sad", "Lucky", "Unlucky", "Keep your eyes open", "More"};
+        Random rand = new Random(); //create and use the random class/object
+        int r = rand.nextInt(fortunes.length);
+        System.out.println(fortunes[r]);
+
+
+//        for(int i = 0; i < fortunes.length; i++){
+//            System.out.println(fortunes[i]);
+//        }
+    }
+
+}
